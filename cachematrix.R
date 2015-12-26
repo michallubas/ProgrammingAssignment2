@@ -9,12 +9,12 @@ a<-matrix(c(1:8), ncol=3)
 
 makeCacheMatrix <- function(x = matrix()) {   ## takes an empty matrix as default
   inv <- NULL                                 ## resets the local variable
-  #  set <- function(y) {                     ## the set function CHANGES THE VECTOR stored in the main function - no use here
+  #  set <- function(y) {                     ## the set function CHANGES THE VECTOR stored in the main function - NO USE HERE
   #    x <<- y
   #    m <<- NULL
   #  }
   get <- function() x                                    ## gets the MATRIX stored in the main function
-  setinverse <- function(inverse) inv <<- inverse        ## stores the value of the input in a variable m into the main function makeCacheMatrix
+  setinverse <- function(inverse) inv <<- inverse        ## stores the value of the input in a variable inv (parent env.)
   getinverse <- function() inv                           ## returns the stored value
   list(get = get,                                        ## a list of 4 functions in the function makeCacheMatrix
        setinverse = setinverse,
