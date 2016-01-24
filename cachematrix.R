@@ -2,8 +2,8 @@
 ## functions do
 
 ## Write a short comment describing this function
-#This function creates a special "matrix" object that can cache its inverse.
-#Computing the inverse of a square matrix can be done with the solve function
+##This function creates a special "matrix" object that can cache its inverse.
+##Computing the inverse of a square matrix can be done with the solve function
 
 a<-matrix(c(1:8), ncol=3)
 
